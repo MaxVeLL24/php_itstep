@@ -9,7 +9,7 @@
 </head>
 <body>
 <?php
-
+//first init
 //var_dump($menu);
 
 //
