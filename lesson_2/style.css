@@ -1,0 +1,21 @@
+ul{
+    width: 40%;
+    display: flex;
+}
+li{
+    display: block;
+    flex-direction: row;
+    height: 30px;
+    padding: 5px;
+    width: 20%;
+}
+li a{
+    text-decoration: none;
+    color: black;
+}
+li a:visited{
+    color: black;
+}
+li a:hover{
+    color: red;
+}
