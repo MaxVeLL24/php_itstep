@@ -1,11 +1,18 @@
 <?php
 session_start();
-if (!isset($_POST['q'])) {
-    $step = 1;
-    $title = 'NEW';
-} else {
-    $step = $_POST['q'];
-    $title = $_POST['title'];
+$q = 1;
+
+if (!$_SESSION['right_answers']) {
+    $_SESSION['right_answers'] = 0;
+}
+if ($_POST['q1'] == 'setcookie[cookie_name]') {
+    $_SESSION['right_answers'] += $q;
+}
+if ($_POST['q2'] == 'session_start()') {
+    $_SESSION['right_answers'] += $q;
+}
+if ($_POST['q3'] == '10') {
+    $_SESSION['right_answers'] += $q;
 }
 ?>
 <!doctype html>
@@ -18,19 +25,19 @@ if (!isset($_POST['q'])) {
     <title>Document</title>
 </head>
 <body>
-<h1><?= $title ?></h1>
+<h1>ОПРОС</h1>
 <form action="" method="post">
     <?php
-    //    $count = 1;
-    //    if ($_POST['action'] == 'next') {
-    //        $count = $count + 1;
-    //        var_dump($count);
-    //    } else if ($_POST['action'] == 'prev') {
-    //        $count = $count - 1;
-    //        var_dump($count);
-    //    }
-    //    $_SESSION['step'] = $count;
-    switch ($step) {
+    if (!$_POST['action']) {
+        if (!$_SESSION['step']) {
+            $_SESSION['step'] = 1;
+        }
+    } else if ($_POST['action'] == 'next') {
+        $_SESSION['step'] += $q;
+    } else if ($_POST['action'] == 'prev') {
+        $_SESSION['step'] -= $q;
+    }
+    switch ($_SESSION['step']) {
         case 1:
             include 'q/q1.php';
             break;
@@ -40,12 +47,19 @@ if (!isset($_POST['q'])) {
         case 3:
             include 'q/q3.php';
             break;
+        case 4:
+            echo '<h3>' . 'You give' . ' ' . $_SESSION['right_answers'] . ' ' . 'right answers' . '</h3>';
+            break;
     }
     ?>
     <br>
     <br>
     <input type="submit" value="prev" name="action">
     <input type="submit" value="next" name="action">
+    <?php
+    var_dump($_SESSION['right_answers']);
+    ?>
+
 </form>
 </body>
 </html>

@@ -1,6 +1,7 @@
-<input type="hidden" name="q" value="2">
-<input type="hidden" name="title" value="2">
 <h1>Как начать сессию</h1>
-    <input type="radio">session_start(
-    <input type="radio">session_начать()
-    <input type="radio">session_abort()
+<input type="radio" name="q2"<?php if (isset($q2) && $q2 == "session_start()") echo "checked"; ?>
+       value="session_start()">session_start()
+<input type="radio" name="q2"<?php if (isset($q2) && $q2 == "session_начать()") echo "checked"; ?>
+       value="session_начать()">session_начать()
+<input type="radio" name="q2"<?php if (isset($q2) && $q2 == "session_abort()") echo "checked"; ?>
+       value="session_abort()">session_abort()
