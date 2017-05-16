@@ -1,0 +1,19 @@
+h1 {
+    background: linear-gradient(to top, #c9de96 0%, #8ab66b 44%, #398235 100%);
+    text-align: center;
+    font-size: 2.5em;
+    color: white;
+}
+tr td span{
+    background: url("../img/papka.png");
+    display: inline-block;
+    background-size: cover;
+    width: 15px;
+    height: 17px;
+}
+tr td{
+    padding: 5px 0 0 2px;
+}
+tr td a{
+    text-decoration-color: black;
+}
