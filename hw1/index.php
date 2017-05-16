@@ -15,7 +15,7 @@ move_uploaded_file($_FILES['name']['tmp_name'], $target_file);
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<h1>FileManager</h1>
+<h1>Ozmmann</h1>
 <form action="" method="post" enctype="multipart/form-data">
     <input type="file" name="fileToUpload" id="fileToUpload">
     <input type="submit" value="Upload" name="submit">
