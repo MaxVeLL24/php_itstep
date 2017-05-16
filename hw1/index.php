@@ -36,6 +36,9 @@ move_uploaded_file($_FILES['name']['tmp_name'], $target_file);
         }
     }
     ?>
+    <?php
+    
+    ?>
 </table>
 </body>
 </html>
