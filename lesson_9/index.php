@@ -1,7 +1,16 @@
-Osman.ramazanov (20:59):
 <?php
-require_once "inc/functions.php";
-require_once "inc/config.php";
+
+$config = [
+    'logfile' => 'logs/transitions.log'
+];
+
+$db = [
+    'host' => '127.0.0.1',
+    'user' => 'root',
+    'password' => '',
+    'db_name' => 'myblog'
+];
+
 $path = isset($_GET['path']) ? $_GET['path'] : getcwd();
 $parentPathArr = explode('\\', $path);
 array_pop($parentPathArr);
@@ -170,15 +179,4 @@ mysqli_close($link);
 </script>
 </body>
 </html>
-<?php
-$config = [
-    'logfile'=> 'logs/transitions.log'
-];
-
-$db = [
-    'host' => '127.0.0.1',
-    'user' => 'root',
-    'password' => '',
-    'db_name' => 'myblog'
-];
 
