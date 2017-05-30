@@ -7,9 +7,10 @@ $db = [
 ];
 
 $link = mysqli_connect($db['host'], $db['user'], $db['password'], $db['db_name']);
-//$query = mysqli_query($link, 'SELECT*FROM `menu`');
-//$menu = mysqli_fetch_all($query, MYSQLI_ASSOC);
+$query = mysqli_query($link, 'SELECT*FROM `menu`');
+$menu = mysqli_fetch_all($query, MYSQLI_ASSOC);
 if ($_POST) {
+    var_dump($_POST);
     mysqli_query($link, "INSERT INTO `menu`(`title`, `url`, `parent_id`) VALUES ('{$_POST['menu']}','{$_POST['url']}','{$_POST['parent-id']}')");
 }
 ?>
@@ -36,6 +37,20 @@ if ($_POST) {
     </select>
     <br>
     <button type="submit">Создать меню</button>
+</form>
+<br>
+<br>
+<br>
+<form action="" id="delete" method="post">
+    <h3>Deleting menu</h3>
+    <select name="delete" id="">
+        <?php
+        foreach ($menu as $d) {
+            echo "<option>{$d['title']}</option>";
+        }
+        ?>
+    </select>
+    <button type="submit">Delete</button>
 </form>
 </body>
 </html>
