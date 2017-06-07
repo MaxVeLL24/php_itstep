@@ -27,9 +27,7 @@ move_uploaded_file($_FILES['name']['tmp_name'], $target_file);
     $dir = scandir($dirToScan);
     array_shift($dir);
     foreach ($dir as $d) {
-
         if (is_file($d)) {
-
             echo "<tr><td style='padding-left: 15px'><form action='' method='post' style='float: right'><input type='hidden' name='remove' value='$d'><button class='delete' type='submit' style='color: red'>x</button></form>$d</td></tr>";
         } elseif (is_dir($d)) {
             echo "<tr><td><span></span><a href='/?path=" . $dirToScan . "/" . "$d" . "'>$d</a></td></tr>";
@@ -37,7 +35,7 @@ move_uploaded_file($_FILES['name']['tmp_name'], $target_file);
     }
     ?>
     <?php
-    
+
     ?>
 </table>
 </body>
