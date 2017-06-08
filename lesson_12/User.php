@@ -1,14 +1,4 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-</head>
-<body>
 <?php
-
 class User
 {
     public $login = 'Maxim';
@@ -52,25 +42,4 @@ class User
     {
     }
 }
-
-$user = new User('Mikola', '3333');
-
-class Admin extends User
-{
-    public $role = 'Admin';
-
-    public function __construct($login_data, $password_data, $role)
-    {
-        $this->role = $role;
-        parent::__construct($login_data, $password_data, $role);
-
-    }
-}
-
-$admin = new Admin('vasya', '1111', 'admin');
-$admin = new Admin('sadas', '21312', 'moderator');
-$admin = new Admin('vasasdasdya', '1adasdas111', 'HR manager');
-//var_dump($admin);
 ?>
-</body>
-</html>
