@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--sadsadasd-->
+<catalog>
+    <book>
+        <tittle>
+            Little maramde
+        </tittle>
+        <author>Yanchak Yevgeniy</author>
+        <price curency="USD">1000</price>
+    </book>
+    <book>
+        <tittle>Big maramde</tittle>
+        <author>Soshkoishvili Yevgeniy</author>
+        <price curency="$">950</price>
+    </book>
+</catalog>
