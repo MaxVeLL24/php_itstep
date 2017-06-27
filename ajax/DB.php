@@ -15,8 +15,7 @@ class DB
 
     public function find($sql)
     {
-        $query = $this->link->query($sql);
-        return $query->fetch_all(MYSQLI_ASSOC);
+        return $query = $this->link->query($sql);
     }
 
     public function insert($sql)

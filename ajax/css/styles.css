@@ -1,0 +1,21 @@
+.cart-wraper{
+    position: relative;
+    margin-left: 20px;
+}
+.cart{
+    width: 400px;
+    position: absolute;
+    border: 1px solid gray;
+    padding: 20px;
+    background-color: #f9f9f9;
+    z-index: 10;
+    top: 55px;
+}
+.cart img {
+    max-width: 100%;
+}
+.cart .cart-product{
+    border-bottom: 1px solid green;
+    margin-bottom: 10px;
+    padding: 5px;
+}
