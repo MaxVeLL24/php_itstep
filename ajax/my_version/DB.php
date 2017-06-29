@@ -3,14 +3,14 @@
 class DB
 {
     public $link;
-    const DB_HOST = '127.0.0.1';
-    const DB_USER = 'root';
-    const DB_PASSWORD = '';
-    const DB_NAME = 'ajax';
+    const host = '127.0.0.1';
+    const user = 'root';
+    const db_password = '';
+    const db_name = 'ajax';
 
     public function __construct()
     {
-        $this->link = new mysqli(self::DB_HOST, self::DB_USER, self::DB_PASSWORD, self::DB_NAME);
+        $this->link = new mysqli(self::host, self::user, self::db_password, self::db_name);
     }
 
     public function find($sql)
@@ -23,6 +23,3 @@ class DB
         return $this->link->query($sql);
     }
 }
-
-
-

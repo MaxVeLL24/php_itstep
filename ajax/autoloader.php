@@ -1,6 +1,4 @@
 <?php
-
-function __autoload($class_name)
-{
-    require $class_name . '.php';
+function __autoload($class) {
+    require_once $class . '.php';
 }

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Hello xml-->
+<catalog>
+    <book>
+        <title>Little Marmade. vol2</title>
+        <author>Yanchak Yevgenyi</author>
+        <price currency="$">1000</price>
+    <subtitle>I'm subtitle</subtitle><subtitle/></book>
+    <book>
+        <title>Big marmade</title>
+        <author>Soshkoishvili</author>
+        <price currency="$">950</price>
+        <hello/>
+    <subtitle>I'm subtitle</subtitle><subtitle/></book>
+</catalog>

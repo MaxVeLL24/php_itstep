@@ -1,10 +1,4 @@
 <?php
-
-if(!empty($_POST["email"])) {
-    $result = mysqli_query("SELECT * FROM `users` WHERE `login`='$this->login'");
-    if (empty($result)) {
-        echo 'login avalible' ;
-    } else {
-        echo 'login already exist' ;
-    }
-}
+require_once 'autoloader.php';
+$is_user = User::validate($_POST['login']);
+echo $is_user ? 'false' : 'true';

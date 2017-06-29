@@ -1,22 +1,21 @@
-.cart-wrapper {
+.cart-wraper{
     position: relative;
+    margin-left: 20px;
 }
-.cart {
+.cart{
     width: 400px;
     position: absolute;
-    border: 1px solid #f7f7f7;
+    border: 1px solid gray;
     padding: 20px;
-    background-color: #e7e7e7;
+    background-color: #f9f9f9;
     z-index: 10;
-    display: none;
+    top: 55px;
 }
-
 .cart img {
     max-width: 100%;
 }
-
-.cart .product {
+.cart .cart-product{
     border-bottom: 1px solid green;
     margin-bottom: 10px;
-    padding: 10px 10px 20px 10px;
+    padding: 5px;
 }
